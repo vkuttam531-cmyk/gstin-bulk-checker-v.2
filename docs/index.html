@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSTIN Bulk Checker – Privacy Policy &amp; Disclaimer</title>
+<style>
+  body{font:16px/1.6 system-ui,Arial,sans-serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}
+  h1{font-size:1.6rem} h2{font-size:1.2rem;margin-top:2rem}
+  .box{background:#fff4e5;border-left:4px solid #e8710a;padding:.6rem 1rem;border-radius:4px}
+  code{background:#f1f3f4;padding:0 .25rem;border-radius:3px}
+  @media (prefers-color-scheme:dark){body{background:#1b1b1d;color:#e8e8ea}.box{background:#3a2c14}code{background:#2a2a2e}}
+</style>
+</head>
+<body>
+<h1>GSTIN Bulk Checker – Privacy Policy &amp; Disclaimer</h1>
+<p><em>Last updated: 28 October 2026</em></p>
+
+<div class="box"><b>In short:</b> The extension needs a <b>license key</b>, which is checked with our license server. Only the key is sent there &ndash; <b>never your GSTINs or taxpayer data</b>. It never asks for or reads your GST portal password. Everything else stays in your own browser.</div>
+
+<h2>1. What the extension does</h2>
+<p>GSTIN Bulk Checker runs only on the GST portal pages <code>services.gst.gov.in/services/searchtp*</code> and <code>services.gst.gov.in/services/auth/*</code>. You paste a list of GSTINs; the extension looks each one up on the GST portal from your own browser and saves the public taxpayer details (legal name, trade name, status, dates, addresses, offices, HSN) in your browser and gives them back as an Excel (.xlsx) or CSV file that you download &ndash; either a new file, or a copy of a file you upload with the details filled in.</p>
+
+<h2>2. Data we handle</h2>
+<ul>
+  <li><b>GSTINs you enter</b> and the <b>taxpayer details</b> returned by the GST portal for them.</li>
+  <li><b>Excel / CSV file you upload</b> (optional) – read locally inside your browser to get the GSTIN list and to produce the filled copy. It is not uploaded to any server and is not kept after you close or refresh the page.</li>
+  <li><b>License key</b> – the key you enter to use the extension. It is sent to our license server to check whether access is active (see sections 3 and 4).</li>
+  <li><b>Device ID</b> – a random identifier the extension generates once in your browser (it is not derived from your hardware, name or any personal information). It is sent with the license key so that each key can be used by a limited number of devices. Where the internet is not available, you may instead share this ID with the developer, who issues a signed license code (valid for a set period) bound to it; the code is verified locally in your browser using a public key, and nothing is sent to us at that time.</li>
+  <li><b>Excel folder</b> (optional) – if you connect the Excel add-in, you choose one folder on your computer (for example <code>Documents\GSTBridge</code>). The extension reads the GSTIN list from it and writes lookup results into it, only inside that folder, only on your computer. Nothing is sent to us.</li>
+  <li><b>Captcha</b> (Mode A) – typed by you and sent directly to the GST portal. It is not stored.</li>
+  <li><b>Login mode (Mode B)</b> – you log in on the official GST portal yourself. The extension never sees your username or password. To repeat the portal’s own search for each GSTIN, it temporarily remembers, <b>in the page’s memory only</b>, the address, headers and body format of the search request your browser just made. This is discarded when you close or refresh the page and is never stored or transmitted anywhere else.</li>
+</ul>
+
+<h2>3. Where data is stored</h2>
+<ul>
+  <li><b>In your browser</b> (<code>chrome.storage.local</code>): your license key, the random device ID, the last license-check result, your acceptance of the disclaimer, and the results of lookups (so you can download them). Saved results are cleared automatically as soon as you load a new set of GSTINs. You can remove results at any time with the “Clear saved” button, or by uninstalling the extension.</li>
+  <li><b>On our license server</b>: for each license key we store the key, a label/note we set for it, its status (active or blocked), an optional message, the creation date, an optional expiry date, and the random device ID bound to the key. We do not store GSTINs, taxpayer details, uploaded files or your portal credentials.</li>
+</ul>
+
+<h2>4. Who receives data</h2>
+<ul>
+  <li><b>The GST portal</b> (<code>services.gst.gov.in</code>) – receives the GSTINs you look up, exactly as if you searched manually.</li>
+  <li><b>Our license server</b> (hosted on Cloudflare) – receives your license key, your random device ID and the extension version when you start the tool and about every 15 minutes while it runs. As with any web request, the hosting provider may see your IP address in its technical logs. We use this only to check access.</li>
+  <li>There is no analytics, tracking or advertising. We do not sell, share, or transfer user data to any third party.</li>
+</ul>
+
+<h2>5. Permissions explained</h2>
+<ul>
+  <li><code>storage</code> – to remember your disclaimer acceptance and saved results in your browser.</li>
+  <li>Access to <code>services.gst.gov.in</code> pages – to show the panel and perform lookups.</li>
+  <li>Access to our license server address – only to verify your license key.</li>
+</ul>
+
+<h2>6. Disclaimer</h2>
+<ul>
+  <li>This is an <b>unofficial</b> tool. It is not affiliated with, endorsed by, or connected to GSTN, the Government of India, or Google.</li>
+  <li>It uses the GST portal’s <b>internal web endpoints, which are not an official public API</b>. The portal can change or restrict them at any time, which may make the extension stop working or return incomplete data.</li>
+  <li>It does <b>not</b> bypass or solve captchas. In Mode A you type the captcha yourself; in Mode B you log in yourself.</li>
+  <li><b>Access:</b> The extension works only with a license key issued by the developer. Access may be changed, suspended or withdrawn at any time, at the developer’s discretion, with or without notice.</li>
+  <li>You are responsible for using the tool in line with the GST portal’s terms of use and applicable law. Sending very many requests may lead the portal to limit your access or account.</li>
+  <li>Information is shown as returned by the GST portal and is provided “as is”, without warranty of accuracy, completeness or availability. It is not legal, tax or professional advice – verify important details on the official portal.</li>
+</ul>
+
+<h2>7. Children</h2>
+<p>The extension is intended for business use and is not directed at children.</p>
+
+<h2>8. Changes</h2>
+<p>If this policy changes, the updated version and date will be posted at this address.</p>
+
+<h2>9. Contact</h2>
+<p>Questions: <a href="mailto:vkuttam531@gmail.com">vkuttam531@gmail.com</a></p>
+</body>
+</html>
