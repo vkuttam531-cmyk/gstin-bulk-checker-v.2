@@ -35,4 +35,4 @@ No internet access to the license server? The panel shows your **Device ID**. Se
 Adds a floating **Get Data** window to Excel that fills results into your open sheet as they arrive. See `SETUP.md` inside the add-in zip.
 
 ## Privacy
-Privacy policy: https://YOUR-GITHUB-USERNAME.github.io/gstin-bulk-checker/
+Privacy policy: https://vkuttam531-cmyk.github.io/gstin-bulk-checker/
